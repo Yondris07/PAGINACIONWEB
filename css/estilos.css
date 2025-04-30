@@ -11,11 +11,13 @@ body {
   color: #333;
 }
 
+/* Header */
 header {
   background-color: #8d99ae;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 20px;
 }
 
@@ -23,7 +25,14 @@ header h1 {
   color: #0077b6;
 }
 
-header a {
+/* Nav styles */
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
   text-decoration: none;
   color: #fff;
   background-color: #0077b6;
@@ -33,10 +42,11 @@ header a {
   transition: background-color 0.3s ease;
 }
 
-header a:hover {
+nav a:hover {
   background-color: #005f8f;
 }
 
+/* Hero */
 .hero {
   background-color: #8d99ae;
   color: #fff;
@@ -56,6 +66,7 @@ header a:hover {
   background-color: #005f8f;
 }
 
+/* Services */
 .services {
   display: flex;
   justify-content: space-around;
@@ -64,7 +75,17 @@ header a:hover {
   margin-bottom: 20px;
 }
 
-/* Footer styles */
+.service-item {
+  text-align: center;
+}
+
+.service-item i {
+  font-size: 50px;
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+/* Footer */
 footer {
   background-color: #0077b6;
   color: #fff;
@@ -81,18 +102,28 @@ footer .social-media a {
 
 /* Responsive design */
 @media (max-width: 768px) {
-  /* Ajustamos el header para dispositivos más pequeños */
   header {
     flex-direction: column;
     text-align: center;
   }
 
-  /* Hacemos que la hero sea más pequeña */
+  nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  nav a {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
   .hero {
     padding: 80px 20px;
   }
 
-  /* Ajustamos las imágenes del hero y el texto */
   .hero h1 {
     font-size: 2rem;
   }
@@ -101,7 +132,6 @@ footer .social-media a {
     font-size: 1.2rem;
   }
 
-  /* Ajustamos el espacio entre los items de servicio */
   .services {
     flex-direction: column;
     padding: 20px;
@@ -113,7 +143,6 @@ footer .social-media a {
 }
 
 @media (max-width: 480px) {
-  /* Ajustes para pantallas más pequeñas */
   .hero h1 {
     font-size: 1.5rem;
   }
